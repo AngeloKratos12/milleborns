@@ -82,7 +82,60 @@ class ManageCarte:
             
     
         
-   
 
+class Montour:
+    '''
+        Une classe qui organise le déroulement du jeu!!
+    '''
+    
+    def face(mycartes, carte, piege,distances, bottes, mypiege):
+        distance = ['escargot', 'canard', 'papillon', 'lievre', 'hirondelle']
+        botte = ['asVolant','citerne','increvable','prioritaire']
+        index = mycartes.index(carte)
+        mycartes.pop(index)
+        
+        if carte in distance:
+            
+            if piege == False:
+                if carte == 'escargot':
+                    distances += 25
+                
+                elif carte == 'canard':
+                    distances += 50
+                
+                elif carte == 'papillon':
+                    distances += 75
+                
+                elif carte == 'lievre':
+                    distances += 100
+                    
+                else:
+                    distances += 200
+            
+            else:
+                print('Vous avez encore piegé! Enlevez le piege.')
+                piege = True
+                while piege == True:
+                    mandefa = str(input("Votre tour de poser une carte: "))
+                    if carte in distances:
+                        piege = True
+                        
+                    else:
+                        piege = False
+        
+        elif carte in botte:
+            bottes.append[carte]
+            carte = ManageCarte.mitsabo(mycartes,restecarte,nbrCarteVerification,mycart)
+          
+            
+                
+                
+            
+            
+        
+        
+        
+        
+        
     
 
